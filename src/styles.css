@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --lime: #c8f400;
+    --dark: #0a0d05;
+    --dark2: #111408;
+    --dark3: #161a09;
+    --muted: #6b7a52;
+    --text: #d4ddb8;
+    --white: #f0f5e0;
+    --text-main: #f2f9b7;
+    --text-muted: rgba(242, 249, 183, 0.50);
+    --text-label: rgba(242, 249, 183, 0.35);
+    --border-subtle: rgba(69, 75, 26, 0.40);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ── NOISE OVERLAY ── */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: .035;
+    pointer-events: none;
+    z-index: 1000;
+}

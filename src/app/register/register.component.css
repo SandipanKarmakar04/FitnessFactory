@@ -1,0 +1,281 @@
+/* ─── TOP NAV ─── */
+    .top-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      font-size: 1.35rem;
+      color: var(--primary);
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-left: 2.5rem;
+      transition: color .25s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+
+    .nav-help .material-symbols-outlined {
+      color: var(--primary);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+        /* ─── MAIN LAYOUT ─── */
+    .main-wrap {
+      display: flex;
+      min-height: 100vh;
+      /* padding-top: 64px; nav height */
+      position: relative;
+      z-index: 1;
+    }
+/* ─── MAIN LAYOUT ─── */
+.main-wrap {
+    display: flex;
+    min-height: 100vh;
+    /* padding-top: 64px; */
+    /* nav height */
+    position: relative;
+    z-index: 1;
+    
+}
+
+/* ─── VISUAL PANEL ─── */
+.visual-panel {
+    position: relative;
+    overflow: hidden;
+    background: #0a0d00;
+}
+
+.visual-panel img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 1s ease;
+}
+
+.visual-panel:hover img {
+    filter: grayscale(0%);
+}
+
+.visual-overlay-r {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--bg-surface), transparent);
+    opacity: 0.65;
+    z-index: 1;
+}
+
+.visual-overlay-b {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--bg-surface), transparent);
+    opacity: 0.45;
+    z-index: 2;
+}
+
+.visual-text {
+    position: absolute;
+    bottom: 5rem;
+    left: 3rem;
+    z-index: 3;
+    max-width: 420px;
+}
+
+.visual-text h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--lime);
+    text-shadow: 0 0 40px rgba(161, 233, 69, 0.35);
+    margin-bottom: 1.5rem;
+}
+
+.visual-tagline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.visual-tagline .line {
+    height: 2px;
+    width: 48px;
+    background: var(--lime);
+    flex-shrink: 0;
+}
+
+.visual-tagline p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--lime);
+    opacity: 0.75;
+}
+
+
+/* ─── FORM PANEL ─── */
+.form-panel {
+    background: var(--bg-surface);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem 2rem;
+    padding-top: 100px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.form-inner {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* Heading */
+.form-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    line-height: 0.88;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.form-heading .accent {
+    color: var(--lime);
+    font-style: italic;
+}
+
+.form-sub {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+/* Labels */
+.ff-label {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+    margin-left: 0.25rem;
+}
+
+/* Inputs */
+.ff-input {
+    width: 100%;
+    background: #141803;
+    border: none;
+    border-radius: 8px;
+    color: var(--text-main);
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.95rem;
+    padding: 0.95rem 1rem;
+    outline: none;
+    transition: box-shadow .2s, background .2s;
+}
+
+.ff-input::placeholder {
+    color: var(--text-label);
+}
+
+.ff-input:focus {
+    background: #1f2408;
+    box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* CTA Button */
+.btn-cta {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--lime) 0%, #7abf30 100%);
+    color: #0d1000;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(161, 233, 69, 0.25);
+    transition: transform .15s, box-shadow .15s;
+    margin-top: 45px;
+}
+
+.btn-cta:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(161, 233, 69, 0.38);
+}
+
+.btn-cta:active {
+    transform: scale(0.97);
+}
+/* Login link */
+.login-area {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.login-area p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.login-area a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lime);
+    text-decoration: none;
+    border-bottom: 2px solid var(--lime);
+    padding-bottom: 2px;
+    transition: color .2s, border-color .2s;
+}
+
+.login-area a:hover {
+    color: var(--text-main);
+    border-color: var(--text-main);
+}
+

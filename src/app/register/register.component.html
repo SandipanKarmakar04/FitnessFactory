@@ -1,0 +1,89 @@
+<!-- <p style="background-color: brown;">login works!</p> -->
+<!-- <header class="top-nav">
+    <a class="brand" href="#">Fitness Factory</a>
+
+    <div class="nav-links d-none d-md-block">
+        <a href="#">Workouts</a>
+        <a href="#">Equipment</a>
+        <a href="#">Locations</a>
+    </div>
+
+    <div class="nav-help">
+        <span class="material-symbols-outlined">help_outline</span>
+    </div>
+</header> -->
+
+<!-- ── MAIN ── -->
+<div class="main-wrap">
+
+    <!-- Visual Panel -->
+    <div class="visual-panel col-lg-6 d-none d-lg-block position-relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU1k_jkUxVgnL_q8VXSTMzBlBTEn6GovNqc5TEwzU7w8MSNHByuqL0LHuoyFSR9jMGdDWy8Oxu3IOMvTqTzbR9NP4hU8ZqJsveXim3-5xWJmeLfcFsJw7fPv0yx66fl-JvUQgHMLB2q3KIXmeA3Wuuw16WPE04iM0DWiqfFkBufRYkIs4vRkhmeFiDQn16baJ0alliebL-tD4R5ifZHrD6CknitgaIEKV_9cWiJxapmSsEkXMOn-RJ-hFfz0EjIiHt1jNEutPHFjEC"
+            alt="Dark industrial gym with moody green lighting" />
+        <div class="visual-overlay-r"></div>
+        <div class="visual-overlay-b"></div>
+        <div class="visual-text">
+            <h2>FORGED <br>IN THE <br>FACTORY</h2>
+            <div class="visual-tagline">
+                <div class="line"></div>
+                <p>Scientific Performance / Raw Power</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Panel -->
+    <div class="form-panel col-12 col-lg-6">
+        <div class="form-inner">
+
+            <h1 class="form-heading">
+                JOIN THE<br><span class="accent">REVOLUTION</span>
+            </h1>
+            <p class="form-sub">Step into the industrial age of fitness. Your transformation begins here.</p>
+
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+                <!-- Full Name -->
+                <div class="mb-4">
+                    <label class="ff-label" for="name">Full Name</label>
+                    <input class="ff-input" formControlName="name" type="text" placeholder="John Doe" />
+                </div>
+
+                <!-- Email -->
+                <div class="mb-4">
+                    <label class="ff-label" for="email">Email Address</label>
+                    <input class="ff-input" formControlName="email" type="email" placeholder="john@gmail.com" />
+                </div>
+
+                <!-- Password -->
+                <div class="mb-4">
+                    <label class="ff-label" for="password">Password</label>
+                    <input class="ff-input" formControlName="password" type="password" placeholder="••••••••" />
+                </div>
+
+                <!-- Membership Tier -->
+                <!-- <div class="mb-6">
+                    <label class="ff-label" for="tier">Membership Tier</label>
+                    <div style="position:relative;">
+                        <select class="ff-input" id="tier" style="appearance:none;cursor:pointer;">
+                            <option value="" disabled selected>Select Membership Tier</option>
+                            <option value="iron">Iron Class (Basic)</option>
+                            <option value="titanium">Titanium Elite (Standard)</option>
+                            <option value="overclock">Overclock Alpha (Premium)</option>
+                        </select>
+                        <span class="material-symbols-outlined"
+                            style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--primary);">expand_more</span>
+                    </div>
+                </div> -->
+
+                <!-- CTA -->
+                <div class="pt">
+                    <button type="submit" class="btn-cta" [disabled]="userForm.invalid">Create Account</button>
+                </div>
+
+                <!-- Login link -->
+                <div class="login-area">
+                    <p>Already a Factory Member?</p>
+                    <a href="#" routerLink="/login">Login</a>
+                </div>
+
+            </form>

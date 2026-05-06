@@ -1,0 +1,115 @@
+<main class="page-wrap">
+
+  <!-- ── LEFT: Visual Panel ── -->
+  <section class="visual-panel">
+    <img
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJfMhSKEi4CXLrWBT2C9xqbZQJDBViHuSjcg0Ro-KR7f9XU1or56RHpks0Y2HPY86j2lH5Tl-QZhERSzy_icJKbQ9rPXT07HN1jQzQ0vum6knSgg8bI5Y6XxuCIP_MwrRM3fN6F3ZwtrQAbKuGDCRAcRJ37pp3R3iIBt43Ml5qFurBFdwhFCwLFMV_9Zn3SFBI24-z7b42-7L7fgFxI0jwQxYlRKMqhrIdE4Z9lLpA27z2-iwIkqapxHKQRRU4Ut8knEsDy5sRFwrT"
+      alt="Intense athlete lifting heavy barbell in a dark industrial gym"
+    />
+    <div class="visual-grad"></div>
+
+    <div class="visual-content">
+      <!-- Brand -->
+      <a class="brand" href="#"></a>
+
+      <!-- Hero text -->
+      <div>
+        <h2 class="hero-headline">
+          FORGE<br/>
+          <span class="text-stroke">YOUR</span><br/>
+          LIMITS
+        </h2>
+        <p class="hero-tagline">
+          Enter the catalyst of elite performance. Where grit meets high-precision athletic science.
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div>
+          <div class="stat-value">24/7</div>
+          <div class="stat-label">Access</div>
+        </div>
+        <div>
+          <div class="stat-value">5.0</div>
+          <div class="stat-label">Elite Tier</div>
+        </div>
+        <div>
+          <div class="stat-value">0%</div>
+          <div class="stat-label">Excuses</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RIGHT: Form Panel ── -->
+  <section class="form-panel">
+    <!-- Mobile logo -->
+    <a class="mobile-logo" href="#">Fitness Factory</a>
+
+    <div class="form-inner">
+
+      <!-- Header -->
+      <div class="mb-m">
+        <span class="sys-label">System Auth</span>
+        <h1 class="form-heading">
+          ACCESS THE<br/><span class="accent">FOUNDRY</span>
+        </h1>
+      </div>
+
+      <!-- Form -->
+      <form  [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+        <!-- Email -->
+        <div class="ff-field mb-fields">
+          <label class="ff-label" for="email">Email Address</label>
+          <input class="ff-input" formControlName="email" type="email" placeholder="john@gmail.com" required/>
+        </div>
+
+        <!-- Password -->
+        <div class="ff-field mb-m">
+          <label class="ff-label" for="password">Password</label>
+          <input class="ff-input" formControlName="password" type="password" placeholder="••••••••" required/>
+        </div>
+
+        <!-- Remember / Forgot -->
+        <div class="d-flex align-items-center justify-content-between mb-m">
+          <div class="d-flex align-items-center">
+            <input class="ff-check" id="remember-me" name="remember-me" type="checkbox"/>
+            <label class="ff-check-label" for="remember-me">Remember Me</label>
+          </div>
+          <a class="forgot-link" href="#">Forgot Password?</a>
+        </div>
+
+        <!-- Actions -->
+        <div>
+          <button class="btn-cta" type="submit" (click)="onLogin()">Log In</button>
+
+          <div class="divider-or mt-m mb-s">
+            <span>or</span>
+          </div>
+
+          <div class="text-center">
+            <p style="font-size:0.9rem;color:var(--on-surface-variant);margin-bottom:0.75rem;">
+              New to the factory?
+            </p>
+            <a class="create-link" href="#">
+              Create an Account
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Footer -->
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Help</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
